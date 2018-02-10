@@ -1,13 +1,5 @@
 
 # WordPress Query Comprehensive Reference
-*Compiled by luetkemj - [luetkemj.com](http://luetkemj.com)*
-
-Original gist: https://gist.github.com/luetkemj/2023628
-
-CODEX: http://codex.wordpress.org/Class_Reference/WP_Query#Parameters
-
-Source: https://core.trac.wordpress.org/browser/tags/3.9/src/wp-includes/query.php
-
 ```php
 <?php
 /**
