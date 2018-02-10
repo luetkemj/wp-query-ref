@@ -2,6 +2,8 @@
 # WordPress Query Comprehensive Reference
 *Compiled by luetkemj - [luetkemj.com](http://luetkemj.com)*
 
+Original gist: https://gist.github.com/luetkemj/2023628
+
 CODEX: http://codex.wordpress.org/Class_Reference/WP_Query#Parameters
 
 Source: https://core.trac.wordpress.org/browser/tags/3.9/src/wp-includes/query.php
@@ -264,3 +266,13 @@ wp_reset_postdata();
 
 ?>
 ```
+
+## Contributing
+
+Contributions are welcome.
+
+Find a problem? Open an [issue](https://github.com/luetkemj/wp-query-ref/issues)!
+
+Better yet, fix it yourself and open a pull request!
+
+Never submitted a pull request before? You can learn how from this free series [How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
