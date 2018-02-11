@@ -208,7 +208,7 @@ $args = array(
     'meta_key' => 'key', // (string) - Custom field key.
     'meta_value' => 'value', // (string) - Custom field value.
     'meta_value_num' => 10, // (number) - Custom field value.
-    'meta_compare' => '=', // (string) - Operator to test the 'meta_value'. Possible values are '!=', '>', '>=', '<', or ='. Default value is '='.
+    'meta_compare' => '=', // (string) - Operator to test the 'meta_value'. Possible values are '=', '!=', '>', '>=', '<', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'BETWEEN', 'NOT BETWEEN', 'NOT EXISTS', 'REGEXP', 'NOT REGEXP' or 'RLIKE'. Default value is '='.
     'meta_query' => array( // (array) - Custom field parameters (available with Version 3.1).
       'relation' => 'AND', // (string) - Possible values are 'AND', 'OR'. The logical relationship between each inner meta_query array when there is more than one. Do not use with a single inner meta_query array.
        array(
@@ -228,6 +228,11 @@ $args = array(
 // Permission Parameters - Display published posts, as well as private posts, if the user has the appropriate capability:
 // http://codex.wordpress.org/Class_Reference/WP_Query#Permission_Parameters
     'perm' => 'readable', // (string) Possible values are 'readable', 'editable'
+
+// Mime Type Parameters - Used with the attachments post type.
+// https://codex.wordpress.org/Class_Reference/WP_Query#Mime_Type_Parameters
+    'post_mime_type' => 'image/gif', // (string/array) - Allowed mime types.
+
 
 // Caching Parameters
 // http://codex.wordpress.org/Class_Reference/WP_Query#Caching_Parameters
