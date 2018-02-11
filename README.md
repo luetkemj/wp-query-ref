@@ -44,13 +44,13 @@ $args = array(
 // Important Note: tax_query takes an array of tax query arguments arrays (it takes an array of arrays)
 // This construct allows you to query multiple taxonomies by using the relation parameter in the first (outer) array to describe the boolean relationship between the taxonomy queries.
   'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
-  'relation' => 'AND', // (string) - Possible values are 'AND' or 'OR' and is the equivalent of running a JOIN for each taxonomy
+    'relation' => 'AND', // (string) - The logical relationship between each inner taxonomy array when there is more than one. Possible values are 'AND', 'OR'. Do not use with a single inner taxonomy array. Default value is 'AND'.
     array(
       'taxonomy' => 'color', // (string) - Taxonomy.
-      'field' => 'slug', // (string) - Select taxonomy term by ('id' or 'slug')
+      'field' => 'slug', // (string) - Select taxonomy term by Possible values are 'term_id', 'name', 'slug' or 'term_taxonomy_id'. Default value is 'term_id'.
       'terms' => array( 'red', 'blue' ), // (int/string/array) - Taxonomy term(s).
       'include_children' => true, // (bool) - Whether or not to include children for hierarchical taxonomies. Defaults to true.
-      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND'.
+      'operator' => 'IN' // (string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND', 'EXISTS' and 'NOT EXISTS'. Default value is 'IN'.
     ),
     array(
       'taxonomy' => 'actor',
