@@ -150,21 +150,25 @@ $args = array(
                        //'DESC' - descending order from highest to lowest values (3, 2, 1; c, b, a).
     'orderby' => 'date', // (string) - Sort retrieved posts by parameter. Defaults to 'date'. One or more options can be passed. EX: 'orderby' => 'menu_order title'
                          //Possible Values:
-                         //'none' - No order (available with Version 2.8).
-                         //'ID' - Order by post id. Note the captialization.
-                         //'author' - Order by author.
-                         //'title' - Order by title.
-                         //'name' - Order by post name (post slug).
-                         //'date' - Order by date.
-                         //'modified' - Order by last modified date.
-                         //'parent' - Order by post/page parent id.
-                         //'rand' - Random order.
-                         //'comment_count' - Order by number of comments (available with Version 2.9).
-                         //'menu_order' - Order by Page Order. Used most often for Pages (Order field in the EdiPage Attributes box) and for Attachments (the integer fields in the Insert / Upload MediGallery dialog), but could be used for any post type with distinct 'menu_order' values (theall default to 0).
-                         //'meta_value' - Note that a 'meta_key=keyname' must also be present in the query. Note alsthat the sorting will be alphabetical which is fine for strings (i.e. words), but can bunexpected for numbers (e.g. 1, 3, 34, 4, 56, 6, etc, rather than 1, 3, 4, 6, 34, 56 as yomight naturally expect).
-                         //'meta_value_num' - Order by numeric meta value (available with Version 2.8). Also notthat a 'meta_key=keyname' must also be present in the query. This value allows for numericasorting as noted above in 'meta_value'.
-                         //'title menu_order' - Order by both menu_order AND title at the same time. For more info see: http://wordpress.stackexchange.com/questions/2969/order-by-menu-order-and-title
-                         //'post__in' - Preserve post ID order given in the post__in array (available with Version 3.5).
+                         // 'none' - No order (available since Version 2.8).
+                         // 'ID' - Order by post id. Note the capitalization.
+                         // 'author' - Order by author. ('post_author' is also accepted.)
+                         // 'title' - Order by title. ('post_title' is also accepted.)
+                         // 'name' - Order by post name (post slug). ('post_name' is also accepted.)
+                         // 'type' - Order by post type (available since Version 4.0). ('post_type' is also accepted.)
+                         // 'date' - Order by date. ('post_date' is also accepted.)
+                         // 'modified' - Order by last modified date. ('post_modified' is also accepted.)
+                         // 'parent' - Order by post/page parent id. ('post_parent' is also accepted.)
+                         // 'rand' - Random order. You can also use 'RAND(x)' where 'x' is an integer seed value.
+                         // 'comment_count' - Order by number of comments (available since Version 2.9).
+                         // 'relevance' - Order by search terms in the following order: First, whether the entire sentence is matched. Second, if all the search terms are within the titles. Third, if any of the search terms appear in the titles. And, fourth, if the full sentence appears in the contents.
+                         // 'menu_order' - Order by Page Order. Used most often for Pages (Order field in the Edit Page Attributes box) and for Attachments (the integer fields in the Insert / Upload Media Gallery dialog), but could be used for any post type with distinct 'menu_order' values (they all default to 0).
+                         // 'meta_value' - Note that a 'meta_key=keyname' must also be present in the query. Note also that the sorting will be alphabetical which is fine for strings (i.e. words), but can be unexpected for numbers (e.g. 1, 3, 34, 4, 56, 6, etc, rather than 1, 3, 4, 6, 34, 56 as you might naturally expect). Use 'meta_value_num' instead for numeric values.
+                         // 'meta_type' if you want to cast the meta value as a specific type. Possible values are 'NUMERIC', 'BINARY',  'CHAR', 'DATE', 'DATETIME', 'DECIMAL', 'SIGNED', 'TIME', 'UNSIGNED', same as in '$meta_query'. When using 'meta_type' you can also use 'meta_value_*' accordingly. For example, when using DATETIME as 'meta_type' you can use 'meta_value_datetime' to define order structure.
+                         // 'meta_value_num' - Order by numeric meta value (available since Version 2.8). Also note that a 'meta_key=keyname' must also be present in the query. This value allows for numerical sorting as noted above in 'meta_value'.
+                         // 'post__in' - Preserve post ID order given in the 'post__in' array (available since Version 3.5). Note - the value of the order parameter does not change the resulting sort order.
+                         // 'post_name__in' - Preserve post slug order given in the 'post_name__in' array (available since Version 4.6). Note - the value of the order parameter does not change the resulting sort order.
+                         // 'post_parent__in' - Preserve post parent order given in the 'post_parent__in' array (available since Version 4.6). Note - the value of the order parameter does not change the resulting sort order.
 
 // Date Parameters - Show posts associated with a certain time and date period.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Date_Parameters
