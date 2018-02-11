@@ -14,7 +14,7 @@ $args = array(
 
 // Author Parameters - Show posts associated with certain author.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Author_Parameters
-  'author' => '1,2,3,', // (int) - use author id [use minus (-) to exclude authors by ID ex. 'author' => '-1,-2,-3,']
+  'author' => '1,2,3,', // (int | string) -  use author id or comma-separated list of IDs [use minus (-) to exclude authors by ID ex. 'author' => '-1,-2,-3,']
   'author_name' => 'luetkemj', // (string) - use 'user_nicename' (NOT name)
   'author__in' => array( 2, 6 ), // (array) - use author id (available with Version 3.7).
   'author__not_in' => array( 2, 6 ), // (array)' - use author id (available with Version 3.7).
