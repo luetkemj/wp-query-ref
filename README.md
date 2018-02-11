@@ -65,9 +65,11 @@ $args = array(
 // http://codex.wordpress.org/Class_Reference/WP_Query#Post_.26_Page_Parameters
   'p' => 1, // (int) - use post id.
   'name' => 'hello-world', // (string) - use post slug.
+  'title' => 'Hello World' // (string) - use post title (available with Version 4.4)
   'page_id' => 1, // (int) - use page id.
   'pagename' => 'sample-page', // (string) - use page slug.
   'pagename' => 'contact_us/canada', // (string) - Display child page using the slug of the parent and the child page, separated ba slash
+  'post_name__in' => 'sample-post' (array) // - use post slugs. Specify posts to retrieve. (available since Version 4.4)
   'post_parent' => 1, // (int) - use page id. Return just the child Pages. (Only works with heirachical post types.)
   'post_parent__in' => array(1,2,3) // (array) - use post ids. Specify posts whose parent is in an array. NOTE: Introduced in 3.6
   'post_parent__not_in' => array(1,2,3), // (array) - use post ids. Specify posts whose parent is not in an array.
@@ -83,19 +85,20 @@ $args = array(
                           // null for all posts with and without passwords
   'post_password' => 'multi-pass', // (string) - show posts with a particular password (available with Version 3.9)
 
-// Type & Status Parameters - Show posts associated with certain type or status.
+// Post Type Parameters - Show posts associated with certain type or status.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Type_Parameters
   'post_type' => array( // (string / array) - use post types. Retrieves posts by Post Types, default value is 'post';
     'post', // - a post.
     'page', // - a page.
     'revision', // - a revision.
     'attachment', // - an attachment. The default WP_Query sets 'post_status'=>'published', but atchments default to 'post_status'=>'inherit' so you'll need to set the status to 'inherit' or 'any'.
-    'my-post-type', // - Custom Post Types (e.g. movies)
+    'nav_menu_item' // - a navigation menu item
+    'my-custom-post-type', // - Custom Post Types (e.g. movies)
   ),
   // NOTE: The 'any' keyword available to both post_type and post_status queries cannot be used within an array.
   'post_type' => 'any', // - retrieves any type except revisions and types with 'exclude_from_search' set to true.
 
-// Type & Status Parameters - Show posts associated with certain type or status.
+// Post Status Parameters - Show posts associated with certain type or status.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Status_Parameters
     'post_status' => array( // (string / array) - use post status. Retrieves posts by Post Status, default value i'publish'.
       'publish', // - a published post or page.
