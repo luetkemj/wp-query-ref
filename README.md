@@ -4,7 +4,7 @@
 <?php
 /**
 * WordPress Query Comprehensive Reference
-* Compiled by luetkemj - luetkemj.com
+* Compiled by luetkemj - luetkemj.github.io
 *
 * CODEX: http://codex.wordpress.org/Class_Reference/WP_Query#Parameters
 * Source: https://core.trac.wordpress.org/browser/tags/4.9.4/src/wp-includes/query.php
