@@ -100,7 +100,7 @@ $args = array(
 
 // Post Status Parameters - Show posts associated with certain type or status.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Status_Parameters
-    'post_status' => array( // (string / array) - use post status. Retrieves posts by Post Status, default value i'publish'.
+    'post_status' => array( // (string | array) - use post status. Retrieves posts by Post Status, default value i'publish'.
       'publish', // - a published post or page.
       'pending', // - post is pending review.
       'draft',  // - a post in draft status.
@@ -114,6 +114,13 @@ $args = array(
     'post_status' => 'any', // - retrieves any status except those from post types with 'exclude_from_search' set to true.
 
 
+// Comment Paremters - @since Version 4.9 Introduced the `$comment_count` parameter.
+// https://codex.wordpress.org/Class_Reference/WP_Query#Comment_Parameters
+    'comment_count' => 10 // (int | array) The amount of comments your CPT has to have ( Search operator will do a '=' operation )
+    'comment_count' => array(
+      'value' => 10 // (int) - The amount of comments your CPT has to have when comparing
+      'compare' => '=' // (string) - The search operator. Possible values are '=', '!=', '>', '>=', '<', '<='. Default value is '='.
+    )
 
 // Pagination Parameters
     //http://codex.wordpress.org/Class_Reference/WP_Query#Pagination_Parameters
