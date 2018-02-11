@@ -21,12 +21,13 @@ $args = array(
 
 // Category Parameters - Show posts associated with certain categories.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Category_Parameters
-  'cat' => 5, // (int) - use category id.
-  'category_name' => 'staff, news', // (string) - Display posts that have these categories, using category slug.
+  'cat' => 5, // (int) - Display posts that have this category (and any children of that category), using category id.
+  'cat' => '-12,-34,-56' // Display all posts except those from a category by prefixing its id with a '-' (minus) sign.
+  'category_name' => 'staff, news', // (string) - Display posts that have these categories (and any children of that category), using category slug.
   'category_name' => 'staff+news', // (string) - Display posts that have "all" of these categories, using category slug.
-  'category__and' => array( 2, 6 ), // (array) - use category id.
-  'category__in' => array( 2, 6 ), // (array) - use category id.
-  'category__not_in' => array( 2, 6 ), // (array) - use category id.
+  'category__and' => array( 2, 6 ), // (array) - Display posts that are in multiple categories. This shows posts that are in both categories 2 and 6.
+  'category__in' => array( 2, 6 ), // (array) - Display posts that have this category (not children of that category), using category id.
+  'category__not_in' => array( 2, 6 ), // (array) - Display posts that DO NOT HAVE these categories (not children of that category), using category id.
 
 // Tag Parameters - Show posts associated with certain tags.
 // http://codex.wordpress.org/Class_Reference/WP_Query#Tag_Parameters
