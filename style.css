@@ -16,3 +16,12 @@ h2#contributing {
   color: lightpink;
   margin-top: 40px;
 }
+
+h3#contributors {
+  color: lightpink;
+  margin-top: 20px;
+}
+
+p.contributors {
+  margin-top: 20px;
+}
