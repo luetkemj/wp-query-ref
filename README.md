@@ -108,7 +108,7 @@ $args = array(
       'future', // - a post to publish in the future.
       'private', // - not visible to any users.
       'inherit', // - a revision. see get_children.
-      'trash', // - post is in trash/bin (available with Version 2.9).
+      'trash', // - post is in trashbin (available with Version 2.9).
     ),
     // NOTE: The 'any' keyword available to both post_type and post_status queries cannot be used within an array.
     'post_status' => 'any', // - retrieves any status except those from post types with 'exclude_from_search' set to true.
