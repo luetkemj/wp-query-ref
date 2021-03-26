@@ -106,7 +106,7 @@ $args = array(
       'draft',  // - a post in draft status.
       'auto-draft', // - a newly created post, with no content.
       'future', // - a post to publish in the future.
-      'private', // - not visible to any users.
+      'private', // - visible only to the author, administrators, and editors.
       'inherit', // - a revision. see get_children.
       'trash', // - post is in trashbin (available with Version 2.9).
     ),
