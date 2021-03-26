@@ -106,7 +106,7 @@ $args = array(
       'draft',  // - a post in draft status.
       'auto-draft', // - a newly created post, with no content.
       'future', // - a post to publish in the future.
-      'private', // - not visible to users who are not logged in.
+      'private', // - visible only to the author, administrators, and editors.
       'inherit', // - a revision. see get_children.
       'trash', // - post is in trashbin (available with Version 2.9).
     ),
@@ -238,8 +238,8 @@ $args = array(
 // http://codex.wordpress.org/Class_Reference/WP_Query#Caching_Parameters
 // NOTE Caching is a good thing. Setting these to false is generally not advised.
     'cache_results' => true, // (bool) Default is true - Post information cache.
-    'update_post_term_cache' => true, // (bool) Default is true - Post meta information cache.
-    'update_post_meta_cache' => true, // (bool) Default is true - Post term information cache.
+    'update_post_term_cache' => true, // (bool) Default is true - Post term information cache.
+    'update_post_meta_cache' => true, // (bool) Default is true - Post meta information cache.
     'no_found_rows' => false, // (bool) Default is false. WordPress uses SQL_CALC_FOUND_ROWS in most queries in order to implement pagination. Even when you don’t need pagination at all. By Setting this parameter to true you are telling wordPress not to count the total rows and reducing load on the DB. Pagination will NOT WORK when this parameter is set to true. For more information see: http://flavio.tordini.org/speed-up-wordpress-get_posts-and-query_posts-functions
 
 
