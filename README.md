@@ -15,7 +15,7 @@ $args = [
 // Author Parameters - Show posts associated with certain author.
 // https://developer.wordpress.org/reference/classes/wp_query/#author-parameters
   'author'          =>  '1,2,3,',   // (int | string) -  use author id or comma-separated list of IDs [use minus (-) to exclude authors by ID ex. 'author' => '-1,-2,-3,']
-  'author_name'     =>  'cc',       // (string) - use 'user_nicename' (NOT name)
+  'author_name'     =>  'luetkemj', // (string) - use 'user_nicename' (NOT name)
   'author__in'      =>  [2, 6],     // (array) - use author id.
   'author__not_in'  =>  [2, 6],     // (array) - use author id.
 
